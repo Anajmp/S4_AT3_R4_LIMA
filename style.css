@@ -23,6 +23,11 @@ form {
 label {
     display: block;
     margin-top: 15px;
+
+}
+[type="radio"]{
+    display:flex;
+    flex-direction: column;
 }
 
 input,

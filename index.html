@@ -45,33 +45,30 @@
             <option value="46+">46 anos ou mais</option>
         </select>
 
+        <!-- Caixas de seleção (checkbox) para tópicos de interesse -->
+        <p>Tópicos de Interesse:</p>
+        <label>HTML<input type="checkbox" name="topicos" value="html"></label>
+        <label>CSS<input type="checkbox" name="topicos" value="css"></label>
+        <label>JavaScript<input type="checkbox" name="topicos" value="javascript"></label>
+
+        <!-- Botões de opção (radio) para o turno -->
+        <p>Turno Preferencial:</p>
+        <label>Manhã<input type="radio" name="turno" value="manha" required></label>
+        <label>Tarde<input type="radio" name="turno" value="tarde"></label>
+        <label>Noite<input type="radio" name="turno" value="noite"></label>
+
         <!-- Lista suspensa para área de interesse -->
         <label for="areaInteresse">Área de Interesse:</label>
         <select id="areaInteresse" name="areaInteresse" required>
             <option value="">Selecione...</option>
             <option value="front-end">Front-End</option>
             <option value="back-end">Back-End</option>
-            <option value="full-stack">Full Stack</option>
             <option value="design">UI/UX Design</option>
         </select>
 
-        <!-- Botões de opção (radio) para o turno -->
-        <p>Turno Preferencial:</p>
-        <label><input type="radio" name="turno" value="manha" required> Manhã</label>
-        <label><input type="radio" name="turno" value="tarde"> Tarde</label>
-        <label><input type="radio" name="turno" value="noite"> Noite</label>
-
-        <!-- Caixas de seleção (checkbox) para tópicos de interesse -->
-        <p>Tópicos de Interesse:</p>
-        <label><input type="checkbox" name="topicos" value="html"> HTML</label>
-        <label><input type="checkbox" name="topicos" value="css"> CSS</label>
-        <label><input type="checkbox" name="topicos" value="javascript"> JavaScript</label>
-        <label><input type="checkbox" name="topicos" value="react"> React</label>
-
-        <!-- Campo para upload de documento -->
-        <label for="documento">Anexe seu documento de identidade:</label>
+        <!-- Upload de documento -->
+        <label for="documento">Documento de identidade</label>
         <input type="file" id="documento" name="documento" accept=".pdf,.jpg,.png" required>
-        <!-- accept limita os tipos de arquivo permitidos -->
 
         <!-- Campo de comentários adicionais -->
         <label for="comentarios">Comentários adicionais:</label>
@@ -82,10 +79,6 @@
         <button type="submit">Enviar Inscrição</button>
 
     </form>
-
-    <!-- Comentário geral:
-    A validação é essencial para garantir que os dados enviados sejam coerentes e seguros,
-    evitando erros e entradas maliciosas. -->
 </body>
 
 </html>
