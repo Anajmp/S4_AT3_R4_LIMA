@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição - Workshop de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Formulário de Inscrição para Workshop de Desenvolvimento Web</h1>
+
+    <!-- Tag <form> define o formulário e envia os dados via método POST -->
+    <form action="enviar_inscricao.php" method="POST" enctype="multipart/form-data">
+
+        <!-- Campo de texto para o nome completo -->
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required maxlength="100" placeholder="Digite seu nome completo">
+        <!-- required garante preenchimento obrigatório, maxlength limita o tamanho -->
+
+        <!-- Campo de texto para cidade -->
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required maxlength="50" placeholder="Digite sua cidade">
+
+        <!-- Campo de e-mail com validação de formato -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            placeholder="ex: anajub11@gmail.com">
+        <!-- pattern usa regex para validar formato de e-mail -->
+
+        <!-- Campo de telefone com validação via regex -->
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$"
+            placeholder="(11) 99999-9999">
+        <!-- Regex aceita formatos com ou sem parênteses e traço -->
+
+        <!-- Lista suspensa (select) para faixa etária -->
+        <label for="faixaEtaria">Faixa Etária:</label>
+        <select id="faixaEtaria" name="faixaEtaria" required>
+            <option value="">Selecione...</option>
+            <option value="18-25">18 a 25 anos</option>
+            <option value="26-35">26 a 35 anos</option>
+            <option value="36-45">36 a 45 anos</option>
+            <option value="46+">46 anos ou mais</option>
+        </select>
+
+        <!-- Lista suspensa para área de interesse -->
+        <label for="areaInteresse">Área de Interesse:</label>
+        <select id="areaInteresse" name="areaInteresse" required>
+            <option value="">Selecione...</option>
+            <option value="front-end">Front-End</option>
+            <option value="back-end">Back-End</option>
+            <option value="full-stack">Full Stack</option>
+            <option value="design">UI/UX Design</option>
+        </select>
+
+        <!-- Botões de opção (radio) para o turno -->
+        <p>Turno Preferencial:</p>
+        <label><input type="radio" name="turno" value="manha" required> Manhã</label>
+        <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+        <label><input type="radio" name="turno" value="noite"> Noite</label>
+
+        <!-- Caixas de seleção (checkbox) para tópicos de interesse -->
+        <p>Tópicos de Interesse:</p>
+        <label><input type="checkbox" name="topicos" value="html"> HTML</label>
+        <label><input type="checkbox" name="topicos" value="css"> CSS</label>
+        <label><input type="checkbox" name="topicos" value="javascript"> JavaScript</label>
+        <label><input type="checkbox" name="topicos" value="react"> React</label>
+
+        <!-- Campo para upload de documento -->
+        <label for="documento">Anexe seu documento de identidade:</label>
+        <input type="file" id="documento" name="documento" accept=".pdf,.jpg,.png" required>
+        <!-- accept limita os tipos de arquivo permitidos -->
+
+        <!-- Campo de comentários adicionais -->
+        <label for="comentarios">Comentários adicionais:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"
+            placeholder="Escreva aqui"></textarea>
+
+        <!-- Botão de envio -->
+        <button type="submit">Enviar Inscrição</button>
+
+    </form>
+
+    <!-- Comentário geral:
+    A validação é essencial para garantir que os dados enviados sejam coerentes e seguros,
+    evitando erros e entradas maliciosas. -->
+</body>
+
+</html>
