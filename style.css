@@ -13,11 +13,11 @@ h1 {
 
 form {
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: 62px;
     max-width: 600px;
     margin: 0 auto;
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 65px;
+
 }
 
 label {
@@ -50,14 +50,13 @@ textarea:focus {
 }
 
 button {
-    background-color: #2575fc;
+    background-color: #dc096c;
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
     width: 100%;
 }
 
